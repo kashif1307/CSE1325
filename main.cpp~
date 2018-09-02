@@ -1,8 +1,7 @@
 #include <iostream>
-#include "polygon.cpp"
+#include <polygon.cpp>
 
 using namespace std;
-
 
 int main()
 {
@@ -22,8 +21,8 @@ int main()
       }
     }
 							      
-  cout << "Num of sides is " << polygon.get_sides() << endl;
-  cout << "Perimeter is " << polygon.get_perimeter() << endl;
+  cout << "Num of sides is " << polygon.get_sides();
+  cout << "Perimeter is " << polygon.get_perimeter();
 }
 	  
 						
