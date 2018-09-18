@@ -1,17 +1,41 @@
-#include "deck.cpp"
-#include <iostream>
+#include<iostream>
+#include<string>
+#include<vector>
+#include"vehicle.h"
+#include"gas_vehicle.h"
+#include"electric_vehicle.h"
 
+void print_details(int yr, std::string mk, std::string md, Body_style bodystyle)
 
+{
+  std::cout<<yr<<mk<<md<<bodystyle<<std::endl;
+}
 int main()
 {
 
-  int j;
+  
 
-  for(j=0;j<20;j++)
-    {
-      Card card;
-    cout<< card.card_to_string()<<" ";
-    }
-  return 0;
+std::vector<Electric_Vehicle> evs = {
+  Electric_Vehicle:: Electric_Vehicle{2014, "Telsa", "Model S 85", Body_style::SEDAN, 3.12, 85},
+  Electic_Vehicle::Electric_Vehicle{2014, "Telsa", "Model 3 LR", Body_style::SEDAN, 4.13, 75},
+  Electic_Vehicle::Electric_Vehicle{2018, "GM", "Bolt", Body_style::HATCHBACK, 3.58, 60},
+  Electic_Vehicle::Electric_Vehicle{2018, "Nissan", "LEAF SL", Body_style::HATCHBACK, 3.88, 40},
+ };
+ std::vector<Gas_Vehicle> ice = {
+   Gas_Vehicle::Gas_Vehicle{2017, "Toyota", "RAV4", Body_style::CROSSOVER, 26, 15.9},
+   Gas_Vehicle::Gas_Vehicle{2018, "Ford", "F-150", Body_style::TRUCK, 21, 36},
+   Gas_Vehicle:: Gas_Vehicle{2018, "Nissan", "Rogue", Body_style::HATCHBACK, 29, 14.5},
+   Gas_Vehicle:: Gas_Vehicle{2018, "Chrysler", "Pacifica", Body_style::MINIVAN, 22, 19},
+ };
+
+
+
+ int i;
+ for(i=0;i<evs.size;i++)
+   {
+     print_details(evs.at(i));
+   }
+
+
 
 }
